@@ -5,11 +5,11 @@ Next you need to run the following little bit of python
 import game1
 game1.setup_game()
 
-now you should have a file called "grid" this is the grid the game will be played on and it will be updated as moves are made. Now run your AI thing which should output a file called "move" no .txt or anything with the format: player_num targetx targety destinationx destinationy . Player 2 is the one that has its units/capital mutliplied by 10 FYI. so for example:
+now you should have a file called "grid" this is the grid the game will be played on and it will be updated as moves are made. Now run your AI thing which should output a file called "move" no .txt or anything with the format: player_num targety targetx destinationy destinationx . Player 2 is the one that has its units/capital mutliplied by 10 FYI. so for example:
 
 1 0 1 0 2
 
-would be for player 1 move from 0,1 to 0,2. Note indexing on the grid starts at 0. Great now you should have your move file, so the next thing to do is test the validity of the move and then make it. To do that run this wee bit of python
+would be for player 1 move from 1,0 to 2,0. Note indexing on the grid starts at 0. Great now you should have your move file, so the next thing to do is test the validity of the move and then make it. To do that run this wee bit of python
 
 import game1
 game1.process_turn(0)
