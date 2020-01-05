@@ -1,0 +1,22 @@
+Ok, so first you will need 1 file called "parameters" (no .txt or any of that sort of nonsense). It has a single line, with 2 numbers, so put  10 3 in it (this defines some stuff for the grid but this is what we will be using for the contest).
+
+Next you need to run the following little bit of python
+
+import game1
+game1.setup_game()
+
+now you should have a file called "grid" this is the grid the game will be played on and it will be updated as moves are made. Now run your AI thing which should output a file called "move" no .txt or anything with the format: player_num targetx targety destinationx destinationy . Player 2 is the one that has its units/capital mutliplied by 10 FYI. so for example:
+
+1 0 1 0 2
+
+would be for player 1 move from 0,1 to 0,2. Note indexing on the grid starts at 0. Great now you should have your move file, so the next thing to do is test the validity of the move and then make it. To do that run this wee bit of python
+
+import game1
+game1.process_turn(0)
+
+
+note this does actually return a number, 0 for nothing wrong, 1 for P1 victory, 2 for P2 victory, -1 for damn son, that's an ilegal move and you get a nice little print out telling you why.
+
+Now check grid, if the move was legal, you should see the grid file was updated appropriately. If you don't see the grid being updated appropriately CONGRATULATIONS!! You found an error, now report it to me and I try to fix.
+
+Have a great day and good luck with the challenge!
